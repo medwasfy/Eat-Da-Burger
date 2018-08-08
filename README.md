@@ -1,6 +1,7 @@
 # Eat-Da-Burger APP !
 
-![alt tag]()
+![alt tag](https://github.com/medwasfy/Eat-Da-Burger/blob/master/public/img/bg-1.png)
+![alt tag](https://github.com/medwasfy/Eat-Da-Burger/blob/master/public/img/bg-2.png)
 
 # Functionality
 

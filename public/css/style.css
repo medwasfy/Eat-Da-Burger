@@ -1,0 +1,34 @@
+body {
+  width: 100%;
+  background-color: rgb(122, 26, 26);
+  overflow: hidden;
+  color: #fff;
+  height: auto;
+}
+#bgw {
+ text-align: left;
+}
+h2 {
+  font-size: 32pt;
+}
+
+input {
+  color: #000 ;
+}
+
+ul.waitbg li{
+  float: left;
+  margin: 10px;
+}
+
+#update {
+text-align: center;
+}
+
+#eaten {
+  text-align: center;
+}
+
+.eatenbg {
+  display: inline-block;
+}

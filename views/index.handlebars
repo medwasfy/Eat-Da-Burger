@@ -1,0 +1,57 @@
+<div class="col-md-10 col-md-offset-1">
+  <h2 id="bgw"><u>Burgers Waiting:</u></h2>
+  <br />
+
+  <ul class="waitbg">
+    <img id="bluebg" src="../img/bluebg.jpg" width="300px">
+    {{#each burgers}}
+      {{#unless this.devoured}}
+        <li>
+          <img src="../img/bg.jpg" width="100px">
+          <p>
+            {{this.burger_name}}
+          </p>
+          <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="true">
+            <button type="submit" class="btn btn-default">Devour it!</button>
+          </form>
+        </li>
+      {{/unless}}
+    {{/each}}
+  </ul>
+</div>
+
+<div class="row">
+  <div class="col-md-2"></div>
+    <div class="col-md-4" id="update">
+      <br><br><br>
+        <form class="create-update-form" action="burgers/create" method="POST">
+          <h2 class="add-title">Add a Burger</h2>
+          <div class="form-group">
+            <label for="newBurger">Burger Name:</label>
+            <input type="hidden" name="devoured" value="0">
+            <input type="text" id="newBurger" name="burger_name">
+          <button type="submit" class="btn btn-primary">Add Burger</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md-4" id="eaten">
+      <br><br><br>
+      <h2>Eaten Burgers</h2>
+      <ul class="eatenbg">
+        {{#each burgers}}
+          {{#if this.devoured}}
+            <li>
+              <ol>
+                {{this.burger_name}}
+              </ol>
+            </li>
+            <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+             <input type="hidden" name="devoured" value="false">
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-md-2"></div>
+</div>
